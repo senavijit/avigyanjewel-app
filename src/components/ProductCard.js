@@ -11,13 +11,14 @@ import view from "../images/view.svg";
 
 const ProductCard = (props) => {
   const { grid } = props;
+  console.log(grid);
   let location = useLocation();
 
   return (
     <>
       <div
         className={` ${
-          location.pathname == "/store" ? `gr-${grid}` : "col-3"
+          location.pathname == "/product" ? `gr-${grid}` : "col-3"
         } `}
       >
         <Link to=":id" className="product-card position-relative">
@@ -73,7 +74,7 @@ const ProductCard = (props) => {
         </Link>
       </div>
       <div
-        className={` ${location.pathname == "/store" ? `gr-${grid}` : "col-3"}`}
+        className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}
       >
         <Link className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
